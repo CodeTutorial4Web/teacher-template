@@ -1,0 +1,295 @@
+@import url(main.css);
+
+
+
+.themeContainer {
+    position: absolute;
+    bottom: -3rem;
+    right: 1rem;
+    z-index: 333;
+}
+
+.themeBox {
+    width: 210px;
+    background: #222;
+    transition: 0.3s;
+    border-radius: .5rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    box-shadow: 0 0 .5rem var(--main-color);
+    padding-bottom: 1rem;
+}
+
+.transHide {
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(0);
+    box-shadow: none;
+}
+
+.transHide .themesGrid>div {
+    opacity: 0;
+}
+
+.transHide h5 {
+    opacity: 0;
+}
+
+.themeContainer .themeColor {
+    background: var(--main-color);
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    position: fixed;
+    right: 1.3rem;
+    top: 1.7rem;
+    z-index: 33;
+    box-shadow: 0 0 .5rem var(--main-color);
+}
+
+.themesGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 20px);
+    grid-template-rows: repeat(2, 20px);
+    width: 100%;
+    gap: .5rem;
+}
+
+.themesGrid > div {
+    height: 20px;
+    border-radius: .3rem;
+}
+
+.themesGrid > div:nth-child(1) {
+    background: var(--blue-color-600);
+}
+
+.themesGrid > div:nth-child(2) {
+    background: var(--first-color);
+}
+
+.themesGrid > div:nth-child(3) {
+    background: var(--third-color);
+}
+
+.themesGrid > div:nth-child(4) {
+    background: var(--fourth-color);
+}
+
+.themesGrid > div:nth-child(5) {
+    background: var(--fifth-color);
+}
+
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--navbar-bg);
+    z-index: 9;
+    overflow: hidden;
+    padding: 2rem .5rem;
+    transition: 0.5s;
+    width: 5rem;
+}
+
+.navbar.slide {
+    width: 15%;
+}
+
+.navbar nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 2rem;
+
+}
+
+
+
+.navbar nav > div:nth-child(1) > i  {
+    font-size: 1.5rem;
+}
+.navbar nav > div:nth-child(1)  {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.navbar nav > div:nth-child(1) div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+
+.navbar nav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 1rem;
+    text-decoration: none;
+
+}
+
+.navbar.slide nav .logo {
+    justify-content: start;
+    gap: 1rem;
+}
+
+.navbar nav .logo img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--gradient-color);
+
+}
+
+.navbar nav .logo h1 {
+    font-size: 1.1rem;
+    width: 0;
+    overflow: hidden;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    transition: 0.5s;
+    font-weight: 900;
+    background: var(--gradient-color);
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.navbar.slide nav .logo h1 {
+    width: auto;
+    transition: 0.5s;
+
+}
+
+.navbar nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-direction: column;
+    gap: 1rem;
+    padding: .2rem 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.navbar nav ul li {
+    width: 100%;
+}
+
+.navbar nav ul li a{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.navbar nav ul li a i{ 
+    width: min(3rem);
+    font-size: 1.5rem;
+}
+
+.navbar nav ul span{
+    font-size: 0;
+}
+
+.navbar.slide ul span {
+   font-size: 1rem;
+
+}
+
+.navbar nav ul li a {
+    color: var(--theme-text-color);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: var(--border-radius-rounded);
+    padding: .3rem 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+
+}
+
+
+
+
+
+@media screen and (max-width: 950px){
+   
+    .navbar {
+        width: 100%;
+        height: 4.5rem;
+        padding: .5rem;
+
+    }
+
+    .navbar nav > div:nth-child(1) div {
+        width: auto;
+    }
+
+    .navbar nav .logo {
+        border: none;
+        width: auto;
+    }
+
+    .navbar.slide nav .logo h1 {
+        font-size: 0;
+        transition: 0;
+    }
+
+    .navbar nav {
+        flex-direction: row;
+        align-items: start;
+
+    }
+
+    .navbar nav > div:nth-child(2) {
+        padding: 1rem;
+    }
+
+    .navbar nav > div:nth-child(1){
+        padding: 0;
+        gap: 0;
+        align-items: start;
+        justify-content: start;
+    }
+
+    
+    .navbar nav > div:nth-child(1) div{
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .navbar.slide {
+        width: 100%;
+        height: 40vh;
+    }
+    
+}

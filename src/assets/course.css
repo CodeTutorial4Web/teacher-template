@@ -1,0 +1,226 @@
+
+
+@import url(courses.css);
+@import url(main.css);
+
+.coursePreview {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.coursePreview .courseImage {
+    border-radius: .5rem;
+}
+
+.coursePreview .courseData p {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.coursePreview .courseData h2 {
+    margin-bottom: 0;
+}
+
+.coursePreview .courseData .courseTags {
+    margin-bottom: 2rem;
+}
+
+.courseContentBooks {
+    margin-top: 2rem;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+.courseContent {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.courseBooks {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.courseContentBooks ul {
+    width: 100%;
+    list-style: none;
+}
+
+
+
+.courseContentBooks ul li {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: var(--theme-bg-color-2);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.courseContentBooks .courseBooks ul li a,
+.courseContent ul li a {
+    color: var(--theme-text-color);
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.courseContentBooks .courseBooks ul li a span {
+    padding: .2rem .7rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: var(--border-radius-rounded);
+    background: var(--second-color);
+}
+
+
+.courseContent ul li .conceptNumber {
+    font-style: normal;
+    font-size: 1.1rem;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.courseContent ul li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.courseContentBooks h2 {
+    font-size: 1.5rem;
+}
+
+.plans {
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.paymentPlans {
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+.paymentPlans .paymentPlan {
+    width: 33.3333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid;
+    border-radius: .5rem;
+    padding: 2rem;
+    height: 70vh;
+    gap: 4rem;
+}
+
+.paymentPlans .paymentPlan > div span {
+    color: var(--gray-color-300);
+    font-weight: 700;
+}
+
+.paymentPlans .paymentPlan > span {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.paymentPlans .paymentPlan div {
+    text-align: center;
+}
+
+.paymentPlans .paymentPlan h4{ 
+    font-size: 2.5rem;
+    line-height: 2rem;
+}
+
+.paymentPlans .paymentPlan i {
+    color: var(--fifth-color);
+}
+
+.paymentPlans .paymentPlan:nth-child(1) {
+    border-color: var(--fifth-color);
+    box-shadow: inset 0 0 10rem var(--fifth-color);
+}
+
+
+.paymentPlans .paymentPlan:nth-child(2) {
+    border-color: var(--fourth-color);
+    box-shadow: inset 0 0 10rem var(--fourth-color);
+
+}
+
+
+.paymentPlans .paymentPlan:nth-child(3) {
+    border-color: var(--seventh-color);
+    box-shadow: inset 0 0 10rem var(--seventh-color);
+
+}
+
+.paymentPlans .paymentPlan a {
+    background: none;
+    padding: .4rem 1rem;
+    border-radius: var(--border-radius-rounded);
+    text-decoration: none;
+    color: var(--theme-bg-color);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.paymentPlans .paymentPlan:nth-child(1) a {
+    border: 2px solid var(--fifth-color);
+    background: var(--fifth-color);
+
+}
+
+
+.paymentPlans .paymentPlan:nth-child(2) a {
+    border: 2px solid var(--fourth-color);
+    background: var(--fourth-color);
+}
+
+
+.paymentPlans .paymentPlan:nth-child(3) a {
+    border: 2px solid var(--seventh-color);
+    background: var(--seventh-color);
+}
+
+
+.paymentPlans .paymentPlan:nth-child(1) i {
+    color: var(--fifth-color);
+}
+
+
+.paymentPlans .paymentPlan:nth-child(2) i {
+    color: var(--fourth-color);
+}
+
+
+.paymentPlans .paymentPlan:nth-child(3) i {
+    color: var(--seventh-color);
+}

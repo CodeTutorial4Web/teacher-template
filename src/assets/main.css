@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Cairo:wght@200..1000&family=Eater&family=Faster+One&family=Goblin+One&family=Mouse+Memoirs&family=Nosifer&family=Noto+Kufi+Arabic:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rampart+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Doodle+Shadow&family=Rubik:ital,wght@0,300..900;1,300..900&family=Saira+Stencil+One&family=Seymour+One&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Shojumaru&family=Slackey&family=Stick&family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root {
+    /* Fonts */
+    --font-family-poppins: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-nosifer: 'Nosifer', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-barrio: 'Barrio', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-trade-winds: 'Trade Winds', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-saria-stencil-one: 'Saria Stencil One', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-slackey: 'Slackey', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-rubik-doodle-shadow: 'Rubik Doodle Shadow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-stick: 'Stick', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-faster-one: 'Faster One', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-eater: 'Eater', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-rampart-one: 'Rampart One', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-shantell-sans: 'Shantell Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-shojumaru: 'Shojumaru', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-mouse-memoirs: 'Mouse Memoirs', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-seymour-one: 'Seymour One', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-goblin-one: 'Goblin One', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-noto-kufi-arabic: 'Noto Kufi Arabic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-cairo: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-rubik: 'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-roboto: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-mulish: 'Mulish', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Colors */
+
+
+    --dark-color: #222;
+    --lighter-gray-color: #eee;
+    --light-gray-color: #ddd;
+
+    --blue-color-100: #bbdffb;
+    --blue-color-200: #90cbf9;
+    --blue-color-300: #64b7f6;
+    --blue-color-400: #41a7f5;
+    --blue-color-500: #1e97f3;
+    --blue-color-600: #1a8ae5;
+    --blue-color-700: #1477d2;
+    --blue-color-800: #1065c0;
+    --blue-color-900: #0747a1;
+
+    --red-color-100: #f8d7da;
+    --red-color-200: #f4b2b2;
+    --red-color-300: #f08989;
+    --red-color-400: #ec5252;
+    --red-color-500: #e91e1e;
+    --red-color-600: #d81b60;
+    --red-color-700: #c2185b;
+    --red-color-800: #ad1457;
+    --red-color-900: #880e4f;
+
+    --green-color-100: #e8f5e9;
+    --green-color-200: #c8e6c9;
+    --green-color-300: #a5d6a7;
+    --green-color-400: #81c784;
+    --green-color-500: #66bb6a;
+    --green-color-600: #4caf50;
+    --green-color-700: #43a047;
+    --green-color-800: #388e3c;
+    --green-color-900: #2e7d32;
+
+    --yellow-color-100: #fffde7;
+    --yellow-color-200: #fff9c4;
+    --yellow-color-300: #fff59d;
+    --yellow-color-400: #fff176;
+    --yellow-color-500: #ffee58;
+    --yellow-color-600: #ffeb3b;
+    --yellow-color-700: #fdd835;
+    --yellow-color-800: #fbc02d;
+    --yellow-color-900: #f9a825;
+
+    --purple-color-100: #f3e5f5;
+    --purple-color-200: #e1bee7;
+    --purple-color-300: #ce93d8;
+    --purple-color-400: #ba68c8;
+    --purple-color-500: #ab47bc;
+    --purple-color-600: #9c27b0;
+    --purple-color-700: #8e24aa;
+    --purple-color-800: #7b1fa2;
+    --purple-color-900: #6a1b9a;
+
+    --pink-color-100: #fce4ec;
+    --pink-color-200: #f8bbd0;
+    --pink-color-300: #f48fb1;
+    --pink-color-400: #f06292;
+    --pink-color-500: #ec407a;
+    --pink-color-600: #e91e63;
+    --pink-color-700: #d81b60;
+    --pink-color-800: #c2185b;
+    --pink-color-900: #ad1457;
+
+    --gray-color-100: #f2f2f2;
+    --gray-color-200: #e0e0e0;
+    --gray-color-300: #bdbdbd;
+    --gray-color-400: #9e9e9e;
+    --gray-color-500: #757575;
+    --gray-color-600: #616161;
+    --gray-color-700: #424242;
+
+    --orange-color-100: #fff3e0;
+    --orange-color-200: #ffe0b2;
+    --orange-color-300: #ffcc80;
+    --orange-color-400: #ffab40;
+    --orange-color-500: #ff9800;
+    --orange-color-600: #fb8c00;
+    --orange-color-700: #f57c00;
+    --orange-color-800: #ef6c00;
+    --orange-color-900: #e65100;
+
+    /* Border Radius */
+
+    --border-radius: 0.25rem;
+    --border-radius-sm: 0.125rem;
+    --border-radius-md: 0.25rem;
+    --border-radius-lg: 0.5rem;
+    --border-radius-xl: 0.75rem;
+    --border-radius-2xl: 1rem;
+    --border-radius-3xl: 1.5rem;
+    --border-radius-circle: 50%;
+    --border-radius-rounded: 15rem;
+
+    /* Box Shadow */
+
+    --box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --box-shadow-md: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    --box-shadow-lg: 0 1.5rem 3rem rgba(0, 0, 0, 0.175);
+    --box-shadow-xl: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+
+    /* Transition */
+
+    /* Transition Duration */
+
+    --transition-duration-01: 0.1s;
+    --transition-duration-03: 0.3s;
+    --transition-duration-05: 0.5s;
+    --transition-duration-1: 1s;
+    --transition-duration-2: 2s;
+    --transition-duration-3: 3s;
+
+    /* Transition Delay */
+
+    --transition-delay-01: 0.1s;
+    --transition-delay-03: 0.3s;
+    --transition-delay-05: 0.5s;
+    --transition-delay-1: 1s;
+    --transition-delay-2: 2s;
+    --transition-delay-3: 3s;
+
+    /* Paddings <=> Margin */
+
+    --basic-margin-padding: 0.5rem;
+
+    /* BGS */
+
+    --navbar-bg: #0009;
+    --main-color: #29b5ce;
+    --gradient-color:  linear-gradient(
+        to bottom right,
+        var(--main-color),
+        var(--green-color-400) 80%
+    );
+
+    --first-color: #478792;
+    --second-color: #5e29db;
+    --third-color: var(--orange-color-400);
+    --fourth-color: var(--green-color-700);
+    --fifth-color: #ff4c4c;
+    --sixth-color: #ff9152;
+    --seventh-color: #eaec63;
+    --eighth-color: #1cff3b;
+
+    --theme-bg-color: #111;
+    --theme-bg-color-2: #222;
+    --theme-text-color: #fff;
+
+
+}
+
+a {
+    color: var(--main-color);
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.swal2-popup {
+    background: #222 !important;
+    z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+}
+
+.swal2-icon-error .swal2-title {
+    color: rgb(253, 94, 94);
+}
+
+.swal2-html-container .alertText {
+    color: #fff;
+}
+
+body.firstColor {
+    --main-color: var(--blue-color-600);
+}
+
+body.secondColor {
+    --main-color: var(--first-color);
+}
+
+body.thirdColor {
+    --main-color: var(--third-color);
+}
+
+body.fourthColor {
+    --main-color: var(--fourth-color);
+}
+
+body.fifthColor {
+    --main-color: var(--fifth-color);
+}
+
+
+
+
+body {
+    font-family: var(--font-family-mulish);
+    background: var(--theme-bg-color);
+    color: var(--theme-text-color);
+
+}
+
+.wrapper {
+    padding-left: 5.5rem;
+}
+
+
+.btn {
+    text-decoration: none;
+    color: var(--theme-text-color);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--font-family-poppins);
+    border: none;
+    padding: .5rem 2rem;
+    border-radius: var(--border-radius-rounded);
+    transition: var(--transition-delay-05);
+    border: 2px solid var(--main-color);
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+    background: none;
+}
+
+
+.btn:hover {
+    letter-spacing: 1px;
+    transition: var(--transition-delay-03);
+    background: var(--main-color);
+}
+
+
+.btn i {
+    margin-left: .5rem;
+    transition: var(--transition-delay-05);
+
+}
+
+.btn:hover i {
+    margin-left: 1rem;
+    transition: var(--transition-delay-03);
+
+}
+
+
+section {
+    padding: 3rem 2rem;
+
+}
+
+
+.heading {
+    width: 100%;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+}
+
+
+footer {
+    background: var(--navbar-bg);
+    padding: 2rem;
+    text-align: center;
+
+}
+
+footer a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--main-color-hover);
+}
+
+footer .footerLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+footer p {
+    font-weight: 700;
+}
+
+
+.gridContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.courseCard,
+.bookCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border-radius: .5rem;
+    overflow: hidden;
+    color: var(--theme-text-color);
+    text-decoration: none;
+    width: 100%;
+}
+
+.courseCard .courseContent {
+    background: var(--theme-bg-color-2);
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.courseTags span {
+    padding: .2rem .7rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: var(--border-radius-rounded);
+}
+
+.courseTags span:nth-child(1) {
+    margin-right: 1rem;
+    background: var(--fifth-color);
+
+}
+
+.courseTags span:nth-child(2) {
+    background: var(--second-color);
+
+}
+
+.courseCard .courseContent .courseText {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.courseCard .courseContent .courseText h4 {
+    font-size: 1.2rem;
+}
+
+.courseCard .courseContent .courseText p {
+    font-size: .7rem;
+    color: var(--gray-color-400);
+    margin-bottom: 1rem;
+}
+
+.courseCard .courseContent .courseText span {
+    color: var(--gray-color-400);
+    font-weight: 700;
+}
+
+.courseImage {
+    height: 320px;
+}
+
+.bookImage {
+    height: 500px;
+}
+
+.bookCard {
+    position: relative;
+}
+
+
+.bookCard .bookContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--theme-bg-color-2);
+    padding: 2rem;
+    color: #fff;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+
+}
+
+
+
+
+.bookCard .bookContent h4 {
+    font-size: 1.2rem;
+}
+
+
+.bookCard .bookContent p {
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+
+.bookCard .bookContent .bookText span {
+    color: var(--gray-color-400);
+    font-weight: 700;
+}
+
+.bookTags span {
+    padding: .2rem .7rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: var(--border-radius-rounded);
+}
+
+.bookTags span:nth-child(1) {
+    margin-right: 1rem;
+    background: var(--fifth-color);
+
+}
+
+.bookTags span:nth-child(2) {
+    background: var(--second-color);
+
+}
+
+@media screen and (max-width: 770px) {
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .courseImage {
+        height: 270px;
+    }
+
+    .gridContainer {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .heading {
+        font-size: 1.5rem;
+    }
+
+
+
+
+    .gridContainer {
+
+        grid-template-columns: 1fr;
+    }
+
+}
