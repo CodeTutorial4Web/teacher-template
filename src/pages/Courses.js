@@ -1,7 +1,6 @@
-import CourseCard from "../compnents/CourseCard";
-import Navbar from "../compnents/Navbar";
 import ".././assets/courses.css"
-import Heading from "../compnents/Heading";
+import CourseCard from "../compnents/cards/CourseCard";
+import Heading from "../compnents/general/Heading";
 
 export default function Courses() {
   return (
@@ -13,6 +12,8 @@ export default function Courses() {
       <Heading textContent="Courses" />
 
         <div className="gridContainer">
+            <CourseCard />
+            <CourseCard />
             <CourseCard />
         </div>
       </section>

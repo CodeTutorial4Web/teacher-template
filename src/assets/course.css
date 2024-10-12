@@ -5,10 +5,19 @@
 
 .coursePreview {
     display: flex;
-    flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     align-items: start;
+    gap: 3rem;
 }
+
+
+.coursePreview .courseData {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 60%;
+}
+
 
 .coursePreview .courseImage {
     border-radius: .5rem;
@@ -27,53 +36,32 @@
     margin-bottom: 2rem;
 }
 
-.courseContentBooks {
-    margin-top: 2rem;
+.courseContent {
+    width: 100%;
     display: flex;
     align-items: start;
-    justify-content: space-between;
-    gap: 1rem;
-    width: 100%;
-}
-
-.courseContent {
-    width: 50%;
-    display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-
-.courseBooks {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.courseContentBooks ul {
+.courseContent > ul  {
     width: 100%;
-    list-style: none;
+    margin-top: 1rem;
 }
 
-
-
-.courseContentBooks ul li {
+.courseContent > ul > li {
     width: 100%;
     padding: 1rem 2rem;
-    background: var(--theme-bg-color-2);
     display: flex;
     justify-content: start;
     align-items: center;
+    flex-direction: column;
     gap: 1rem;
-    border-radius: 0.5rem;
     margin-bottom: 1rem;
+    border-bottom: 1px solid #fff;
 }
 
-.courseContentBooks .courseBooks ul li a,
-.courseContent ul li a {
+.courseContent > ul > li > div {
     color: var(--theme-text-color);
     width: 100%;
     text-decoration: none;
@@ -82,145 +70,128 @@
     align-items: center;
 }
 
-.courseContentBooks .courseBooks ul li a span {
-    padding: .2rem .7rem;
-    font-weight: 600;
-    text-align: center;
-    border-radius: var(--border-radius-rounded);
-    background: var(--second-color);
+
+.courseContent > ul > li > ul {
+    list-style: none;
+    width: 100%;
+    padding: 0 2rem;
+
+    display: none;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.courseContent > ul > li > ul > li {
+    width: 100%;
+}
+
+.coursePreview h2 {
+    font-size: 1.5rem;
+    padding: 0;
+    margin-bottom: .5rem;
+}
+
+.courseContent > ul > li.open > ul{
+    display: flex;
 }
 
 
-.courseContent ul li .conceptNumber {
-    font-style: normal;
-    font-size: 1.1rem;
-    height: 40px;
-    min-width: 40px;
-    border-radius: 50%;
-    border: 2px solid var(--main-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
+.discription p{
+    color: var(--gray-color-500);
 }
 
-.courseContent ul li div {
+.discription,
+.teacher {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: .5rem;
+}
+
+
+
+.coursePreview .buyCourse {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    position: sticky;
+    top: 7rem;
+}
+
+.coursePreview .buyCourse h2 {
+    margin: .5rem 0;
+    padding: 0;
+}
+
+.coursePreview .buyCourse .courseDetails .priceAndActions{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+.coursePreview .buyCourse .courseDetails .priceAndActions .actions {
+    display: flex;
     gap: 1rem;
 }
 
-.courseContentBooks h2 {
-    font-size: 1.5rem;
+.coursePreview .buyCourse .courseDetails .priceAndActions .actionBtn {
+    color: var(--gray-color-500);
+    border: 1px solid var(--gray-color-500);
+    padding: .5rem 1rem;
+    border-radius: var(--border-radius-rounded);
+    cursor: pointer;
+    transition: .3s;
 }
 
-.plans {
-    margin-top: 5rem;
-    width: 100%;
+.coursePreview .buyCourse .courseDetails .priceAndActions .actionBtn:hover {
+    background: var(--main-color);
+    color: var(--theme-text-color);
+    border-color: var(--main-color);
 }
 
-.paymentPlans {
-    display: flex;
-    width: 100%;
-    gap: 3rem;
-    justify-content: space-between;
+.coursePreview .buyCourse .courseDetails .priceAndActions .actionBtn:nth-child(1) {
+    padding: .5rem .6rem;
 }
 
-.paymentPlans .paymentPlan {
-    width: 33.3333%;
+.coursePreview .buyCourse .courseDetails {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid;
-    border-radius: .5rem;
-    padding: 2rem;
-    height: 70vh;
-    gap: 4rem;
+    gap: 1rem;
 }
 
-.paymentPlans .paymentPlan > div span {
-    color: var(--gray-color-300);
-    font-weight: 700;
+.coursePreview .buyCourse p{
+    color: var(--gray-color-500);
+    font-size: .9rem;
 }
 
-.paymentPlans .paymentPlan > span {
-    font-size: 3rem;
-    font-weight: 700;
+.coursePreview .buyCourse .coursePrice {
+    font-size: 1.5rem;
+    font-weight: 900;
 }
 
-.paymentPlans .paymentPlan div {
-    text-align: center;
-}
+@media screen and (max-width: 850px){
+    .coursePreview {
+        flex-direction: column-reverse;
+    }
 
-.paymentPlans .paymentPlan h4{ 
-    font-size: 2.5rem;
-    line-height: 2rem;
-}
+    .coursePreview .buyCourse {
+        position: static;
+        width: 100%;
+    }
 
-.paymentPlans .paymentPlan i {
-    color: var(--fifth-color);
-}
+    .coursePreview .courseData {
+        width: 100%;
+    }
 
-.paymentPlans .paymentPlan:nth-child(1) {
-    border-color: var(--fifth-color);
-    box-shadow: inset 0 0 10rem var(--fifth-color);
-}
+    .teacher .teacherCard {
+        width: 100%;
+    }
 
+    .coursePreview {
+        padding: 1rem;
 
-.paymentPlans .paymentPlan:nth-child(2) {
-    border-color: var(--fourth-color);
-    box-shadow: inset 0 0 10rem var(--fourth-color);
-
-}
-
-
-.paymentPlans .paymentPlan:nth-child(3) {
-    border-color: var(--seventh-color);
-    box-shadow: inset 0 0 10rem var(--seventh-color);
-
-}
-
-.paymentPlans .paymentPlan a {
-    background: none;
-    padding: .4rem 1rem;
-    border-radius: var(--border-radius-rounded);
-    text-decoration: none;
-    color: var(--theme-bg-color);
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-.paymentPlans .paymentPlan:nth-child(1) a {
-    border: 2px solid var(--fifth-color);
-    background: var(--fifth-color);
-
-}
-
-
-.paymentPlans .paymentPlan:nth-child(2) a {
-    border: 2px solid var(--fourth-color);
-    background: var(--fourth-color);
-}
-
-
-.paymentPlans .paymentPlan:nth-child(3) a {
-    border: 2px solid var(--seventh-color);
-    background: var(--seventh-color);
-}
-
-
-.paymentPlans .paymentPlan:nth-child(1) i {
-    color: var(--fifth-color);
-}
-
-
-.paymentPlans .paymentPlan:nth-child(2) i {
-    color: var(--fourth-color);
-}
-
-
-.paymentPlans .paymentPlan:nth-child(3) i {
-    color: var(--seventh-color);
+    }
 }

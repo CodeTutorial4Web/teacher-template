@@ -1,22 +1,17 @@
 import ".././assets/forms.css";
-import PasswordInput from "../compnents/PasswordInput";
+import PasswordInput from "../compnents/general/PasswordInput";
 import { Link } from "react-router-dom";
 
 export default function Register() {
-
-
-
-    const handleFormSubmit = (e) => {
-        e.preventDefault()
-    } 
-
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <main className="registerPage">
       <h2>Register</h2>
 
       <div className="formContainer">
-   
         <form onSubmit={handleFormSubmit}>
           <div className="formGroup">
             <label>Username</label>
@@ -33,19 +28,23 @@ export default function Register() {
             <PasswordInput placeholder="Enter Password" />
           </div>
 
-          
           <div className="formGroup">
             <label>Phone Number</label>
-            <input type="number" placeholder="Enter Phone Number" />
+            <input type="text" placeholder="Enter Phone Number" />
           </div>
-         
 
           <div className="formGroup">
             <label>Select School Year</label>
-            <select >
-                <option value="1" key="1">Secondary 1</option>
-                <option value="2" key="2">Secondary 2</option>
-                <option value="3" key="3">Secondary 3</option>
+            <select>
+              <option value="1" key="1">
+                Secondary 1
+              </option>
+              <option value="2" key="2">
+                Secondary 2
+              </option>
+              <option value="3" key="3">
+                Secondary 3
+              </option>
             </select>
           </div>
 
@@ -55,10 +54,13 @@ export default function Register() {
           </div>
 
           <button type="submit" className="btn">
-          Register
+            Register
           </button>
 
-          <Link to="/register">Already Have Account Login</Link>
+          <p className="formAction">
+            Already have an account
+            <Link to="/login">Login</Link>
+          </p>
         </form>
       </div>
     </main>

@@ -7,10 +7,13 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Courses from './pages/Courses';
 import Course from './pages/Course';
-import Books from "./pages/Books";
-import Book from "./pages/Book";
-import Footer from "./compnents/Footer";
-import Navbar from "./compnents/Navbar";
+import Footer from "./compnents/general/Footer";
+import Navbar from "./compnents/general/Navbar";
+import { Teachers } from "./pages/Teachers";
+import Teacher from "./pages/Teacher";
+import TeacherAbout from "./compnents/teacherPage/TeacherAbout";
+import TeacherCourses from "./compnents/teacherPage/TeacherCourses";
+import { Dashboard } from "./pages/Dashboard";
 
 
 export default function App() {
@@ -22,6 +25,7 @@ export default function App() {
     document.body.className = localStorage.getItem("theme");
   }
 
+  
 
 
 
@@ -34,13 +38,18 @@ export default function App() {
         <div className="wrapper">
 
 <Routes>
-  <Route path="/" exact element={<Home /> }/>
+  <Route path="/" exact element={user ? <Navigate to="/dashboard" /> : <Home /> }/>
+  <Route path="/" exact element={user ? <Navigate to="/" /> : <Dashboard /> }/>
   <Route path="/login" exact element={user ? <Navigate to="/" /> : <Login />}/>
   <Route path="/register" exact element={user ? <Navigate to="/" /> : <Register />   }/>
   <Route path="/courses" exact element={<Courses /> }/>
-  <Route path="/books" exact element={<Books />}/>
   <Route path="/course/:courseId" exact element={<Course />}/>
-  <Route path="/book/:bookId" exact element={<Book />}/>
+  <Route path="/teacher/:teacherId" exact element={<Teacher />}>
+      <Route path="about"  exact element={<TeacherAbout />} />
+      <Route path=""  exact element={<TeacherCourses />} />
+  
+  </Route>
+  <Route path="/teachers" exact element={<Teachers />}/>
 </Routes>
 
         </div>

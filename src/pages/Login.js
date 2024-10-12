@@ -1,6 +1,6 @@
 
 import ".././assets/forms.css"
-import PasswordInput from "../compnents/PasswordInput"
+import PasswordInput from "../compnents/general/PasswordInput"
 import { Link } from 'react-router-dom';
 
 
@@ -34,9 +34,15 @@ export default function Login() {
                     <button type="submit" className="btn">Login</button>
 
 
-                     <Link to="/register">
-                     Don't Have Account
-                     </Link>   
+
+                    <p  className="formAction">
+
+                    I don't have account
+                    <Link to="/register">
+                        Regitser
+                     </Link>  
+                    </p>
+                    
                 </form>
             </div>
         </main>

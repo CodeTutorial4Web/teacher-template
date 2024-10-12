@@ -1,0 +1,109 @@
+
+
+@import url(course.css);
+
+.teachersPage {
+    margin-top: 5rem;
+
+}
+
+.teachersGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    padding: 0 2.5rem ;
+    margin-bottom: 4rem;
+
+}
+
+
+.teacherData {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    position: relative;
+}
+
+.teacherData p {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--theme-text-color);
+}
+
+.teacherData .fas {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.teacherData .profession {
+    font-size: .8rem;
+    color: var(--gray-color-400);
+    margin-bottom: .2rem;
+}
+
+.teacherData .desc {
+    font-size: .8rem;
+    color: var(--gray-color-500);
+}
+
+
+.teacherData .students {
+    font-size: .8rem;
+    color: var(--gray-color-500);
+    margin-top: .5rem;
+}
+.teacherCard  .userAvatar {
+    border: 3px solid var(--cards-bg);
+}
+
+.teacherCard  .banner {
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.teacherCard {
+    width: 100%;
+    background: var(--cards-bg);
+    border-radius: .5rem;
+    overflow: hidden;
+    text-decoration: none;
+    border: 3px solid transparent;
+
+}
+
+.teacherCard:hover .userAvatar {
+    border-color: var(--main-color);
+}
+
+.teacher .teacherCard {
+    width: 60%;
+}
+
+
+@media screen and (max-width: 950px) {
+
+    .teachersGrid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+
+
+
+    .teachersGrid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem ;
+
+    }
+
+
+
+}

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barrio&family=Cairo:wght@200..1000&family=Eater&family=Faster+One&family=Goblin+One&family=Mouse+Memoirs&family=Nosifer&family=Noto+Kufi+Arabic:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rampart+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Doodle+Shadow&family=Rubik:ital,wght@0,300..900;1,300..900&family=Saira+Stencil+One&family=Seymour+One&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Shojumaru&family=Slackey&family=Stick&family=Trade+Winds&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 :root {
     /* Fonts */
     --font-family-poppins: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -154,13 +155,15 @@
 
     /* BGS */
 
-    --navbar-bg: #0009;
-    --main-color: #29b5ce;
-    --gradient-color:  linear-gradient(
-        to bottom right,
-        var(--main-color),
-        var(--green-color-400) 80%
-    );
+    --navbar-bg: #00060f;
+    --cards-bg: #010b1a;
+    --main-color: #016dc5;
+    --gradient-color: linear-gradient(to bottom right,
+            var(--main-color),
+            #f3003d 90%);
+    --gradient-color-semi-trans: linear-gradient(to bottom right,
+            #29b5ceda,
+            #66bb6ada 70%);
 
     --first-color: #478792;
     --second-color: #5e29db;
@@ -171,7 +174,7 @@
     --seventh-color: #eaec63;
     --eighth-color: #1cff3b;
 
-    --theme-bg-color: #111;
+    --theme-bg-color: #00040a;
     --theme-bg-color-2: #222;
     --theme-text-color: #fff;
 
@@ -182,7 +185,9 @@ a {
     color: var(--main-color);
 }
 
-
+::selection {
+    background: var(--second-color);
+}
 
 * {
     box-sizing: border-box;
@@ -233,9 +238,11 @@ body {
 
 }
 
-.wrapper {
-    padding-left: 5.5rem;
+
+.simplebar-track.simplebar-vertical.overflow-hidden {
+    display: none;
 }
+
 
 
 .btn {
@@ -246,18 +253,19 @@ body {
     font-family: var(--font-family-poppins);
     border: none;
     padding: .5rem 2rem;
-    border-radius: var(--border-radius-rounded);
+    border-radius: .5rem;
     transition: var(--transition-delay-05);
     border: 2px solid var(--main-color);
-    position: relative;
     overflow: hidden;
     z-index: 3;
     background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .btn:hover {
-    letter-spacing: 1px;
     transition: var(--transition-delay-03);
     background: var(--main-color);
 }
@@ -276,22 +284,83 @@ body {
 }
 
 
-section {
-    padding: 3rem 2rem;
 
-}
 
 
 .heading {
     width: 100%;
+
     font-size: 2.3rem;
     margin-bottom: 1rem;
     font-weight: 900;
+    padding-left: 2.5rem;
+
+
 }
 
+.navigateMenu {
+    position: fixed;
+    right: 0;
+    top: 40%;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    flex-direction: column;
+
+    direction: rtl;
+    z-index: 3;
+    gap: 0.2rem;
+}
+
+.navigateMenu > span {
+    position: fixed;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    right: -15px;
+}
+
+.navigateMenu li {
+    list-style: circle;
+    list-style-position: inside;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-rounded);
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--theme-text-color);
+    background: none;
+    font-weight: 900;
+}
+
+.navigateMenu li:hover {
+    background: var(--theme-text-color);
+    color: var(--theme-bg-color);
+
+}
+
+.navigateMenu li:hover span{
+    font-size: 1.1rem;
+
+
+}
+
+.navigateMenu li.active {
+    background: var(--theme-text-color);
+    color: var(--theme-bg-color);
+
+}
+
+.navigateMenu li.active span {
+    font-size: 1.1rem;
+
+}
+
+.navigateMenu li span {
+    font-size: 0;
+}
 
 footer {
-    background: var(--navbar-bg);
+    background: #000;
     padding: 2rem;
     text-align: center;
 
@@ -321,175 +390,19 @@ footer p {
 }
 
 
-.gridContainer {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    margin-bottom: 3rem;
-}
-
-.courseCard,
-.bookCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    border-radius: .5rem;
-    overflow: hidden;
-    color: var(--theme-text-color);
-    text-decoration: none;
-    width: 100%;
-}
-
-.courseCard .courseContent {
-    background: var(--theme-bg-color-2);
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-    width: 100%;
-}
-
-.courseTags span {
-    padding: .2rem .7rem;
-    font-weight: 600;
-    text-align: center;
-    border-radius: var(--border-radius-rounded);
-}
-
-.courseTags span:nth-child(1) {
-    margin-right: 1rem;
-    background: var(--fifth-color);
-
-}
-
-.courseTags span:nth-child(2) {
-    background: var(--second-color);
-
-}
-
-.courseCard .courseContent .courseText {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-}
-
-.courseCard .courseContent .courseText h4 {
-    font-size: 1.2rem;
-}
-
-.courseCard .courseContent .courseText p {
-    font-size: .7rem;
-    color: var(--gray-color-400);
-    margin-bottom: 1rem;
-}
-
-.courseCard .courseContent .courseText span {
-    color: var(--gray-color-400);
-    font-weight: 700;
-}
-
-.courseImage {
-    height: 320px;
-}
-
-.bookImage {
-    height: 500px;
-}
-
-.bookCard {
-    position: relative;
-}
-
-
-.bookCard .bookContent {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: var(--theme-bg-color-2);
-    padding: 2rem;
-    color: #fff;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-
-}
 
 
 
+@media screen and (max-width: 950px) {
 
-.bookCard .bookContent h4 {
-    font-size: 1.2rem;
-}
+    .wrapper {
+        padding: 0;
+    }
 
-
-.bookCard .bookContent p {
-    font-size: .9rem;
-    margin-bottom: 1rem;
-}
-
-
-.bookCard .bookContent .bookText span {
-    color: var(--gray-color-400);
-    font-weight: 700;
-}
-
-.bookTags span {
-    padding: .2rem .7rem;
-    font-weight: 600;
-    text-align: center;
-    border-radius: var(--border-radius-rounded);
-}
-
-.bookTags span:nth-child(1) {
-    margin-right: 1rem;
-    background: var(--fifth-color);
-
-}
-
-.bookTags span:nth-child(2) {
-    background: var(--second-color);
-
-}
-
-@media screen and (max-width: 770px) {
     .heading {
-        font-size: 1.5rem;
+        padding-left: 1rem;
     }
 
-    .courseImage {
-        height: 270px;
-    }
-
-    .gridContainer {
-
-        grid-template-columns: 1fr;
-    }
 
 }
 
-@media screen and (max-width: 500px) {
-    .heading {
-        font-size: 1.5rem;
-    }
-
-
-
-
-    .gridContainer {
-
-        grid-template-columns: 1fr;
-    }
-
-}

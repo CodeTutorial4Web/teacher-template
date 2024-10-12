@@ -1,0 +1,270 @@
+@import url(main.css);
+@import url(courses.css);
+
+.teacherPage {
+    margin-top: 5rem;
+}
+
+.userData {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.userData .images {
+    height: 240px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 120px;
+}
+
+.userData .images .userAvatar {
+    position: absolute;
+    bottom: calc(-200px / 2.5);
+    border: 5px solid var(--theme-bg-color);
+    left: 5rem;
+}
+
+.userData .images .banner {
+    height: 100%;
+    border-radius: .5rem;
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+}
+
+.user div:nth-child(2) {
+    display: flex;
+    gap: 1rem;
+}
+
+.user h1 .fas{
+
+    color: var(--main-color);
+}
+.user h1 {
+    font-weight: 900;
+    line-height: 1rem;
+}
+
+.user h2 {
+    font-size: 1.5rem;
+    color: var(--gray-color-400);
+}
+
+.user p {
+    color: var(--gray-color-500);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: .5rem;
+}
+
+
+.user p.coursesCount {
+    color: var(--gray-color-500);
+
+    margin-top: 2rem;
+}
+.pages {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.pages .nav {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    padding: none;
+    margin: none;
+    border-bottom: 1px solid var(--main-color);
+    margin-bottom: 3rem;
+}
+
+.pages .nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    border-bottom: 2px solid transparent;
+}
+
+.pages .nav a:hover {
+    border-color: var(--main-color);
+}
+
+
+.user .btn,
+.user .fa-share {
+    border: 2px solid var(--gray-color-500);
+    color: var(--gray-color-500);
+}
+
+
+.user .fa-share {
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius-rounded);
+    transition: var(--transition-delay-05);
+    border: 2px solid var(--gray-color-500);
+
+    overflow: hidden;
+    background: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+.user .fa-share:hover,
+.user .btn:hover  {
+    background: var(--main-color);
+    color: var(--theme-text-color);
+    border-color: var(--main-color);
+    letter-spacing: 0;
+}   
+
+.dropDown {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 50%;
+    padding: 2rem;
+    background: var(--theme-bg-color-2);
+    border-radius: 1rem;
+    z-index: 100;
+    box-shadow: 0 0 20px #000;
+}
+
+.dropDown.show {
+    display: flex;
+}
+
+.dropDown h3 {
+    font-size: 1.7rem;
+}
+
+.dropDown .fa-multiply {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1.5rem;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray-color-500);
+    cursor: pointer;
+}
+
+.copy {
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+.dropDown p {
+    width: 90%;
+    color: #fff;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 1rem;
+    background: #000;
+    overflow-x: auto;
+    border: none;
+    outline: none;
+    
+}
+
+.gridContainer {
+    padding: 0  ;
+
+}
+
+
+@media screen and (max-width: 850px){
+
+
+    .teacherPage {
+        padding: 1rem ;
+    }
+
+    .dropDown {
+        width: 89%;
+    }
+
+    .userData .images {
+        height: 150px;
+        margin-bottom: 5rem;
+    }
+
+    .userData .images .userAvatar {
+        width: 120px !important; 
+        height: 120px !important;
+        min-width: 120px !important; 
+        min-height: 120px !important;
+        max-width: 120px !important; 
+        max-height: 120px !important;
+        bottom: -50px;
+        left: 2rem;
+    }
+
+    .user .btn,
+    .user .fa-share {
+        padding: 0rem .7rem;
+        font-size: .9rem;
+    }
+
+    .user h1 {
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+    
+    .user h2 {
+        font-size: 1rem;
+        color: var(--main-color);
+    }
+    
+    .user p {
+        color: var(--gray-color-400);
+        font-weight: 700;
+        font-size: .8rem;
+    }
+
+    .user .fa-share {
+        width: 40px;
+        height: 40px;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 500px){
+    
+    .user {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+}
